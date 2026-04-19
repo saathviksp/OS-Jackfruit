@@ -66,43 +66,43 @@ In our experiment, `fast` (nice 0) and `slow` (nice 15) ran simultaneously with 
 
 ### 1. Boilerplate directory — all files present after build
 
-![ss1](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss1.webp)
+![ss1](https://github.com/user-attachments/assets/a082306f-0fb4-4a79-b00c-8aaf621d9e1a)
 
 ### 2. Kernel module loaded — dmesg confirms device created, supervisor starts
 
-![ss3-1](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss3-1.webp)
+![ss3-1](https://github.com/user-attachments/assets/6b4072c3-869f-401b-8395-4f2454685400)
 
 ### 3. Full CLI demo — start, ps, logs (hello), stop
 
-![ss3-2](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss3-2.webp)
+![ss3-2](https://github.com/user-attachments/assets/4c4cda50-5467-4c9d-8de1-5a90b49dd66e)
 
 ### 4. Two containers running simultaneously — alpha and beta both show running
 
-![ss4](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss4.webp)
+![ss4](https://github.com/user-attachments/assets/8b378962-03eb-49ae-b007-804d41a42837)
 
 ### 5. Supervisor terminal — containers registered and started
 
-![s44-2](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/s44-2.webp)
+![s44-2](https://github.com/user-attachments/assets/0a9e0b24-871f-482e-9d3b-30731d836623)
 
 ### 6. Log capture — container log test and line 2 from bounded buffer pipeline
 
-![ss7-2](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss7-2.webp)
+![ss7-2](https://github.com/user-attachments/assets/ea3bfffa-753e-469e-8f30-47d0c1aa5cec)
 
 ### 7. Soft limit warning — dmesg shows SOFT LIMIT for memtest
 
-![ss7](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss7.webp)
+![ss7](https://github.com/user-attachments/assets/f2ecb526-ee9e-4653-8f27-8b9d173ec96c)
 
 ### 8. Hard limit kill — dmesg shows HARD LIMIT for memtest and killme, both terminated
 
-![soft-hard](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/soft-hard.webp)
+![soft-hard](https://github.com/user-attachments/assets/cc96f2e7-4cbc-4713-bc45-085d048c255f)
 
 ### 9. Scheduling experiment — fast (nice 0) and slow (nice 15) running concurrently
 
-![soft-nice](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/soft-nice.webp)
+![soft-nice](https://github.com/user-attachments/assets/e6215c32-7220-4ff5-a427-0e3f23660188)
 
 ### 10. Clean teardown — no zombie processes after supervisor shutdown
 
-![ss8](https://raw.githubusercontent.com/saathviksp/OS-Jackfruit/main/ss8.webp)
+![ss8](https://github.com/user-attachments/assets/f087aa1f-3f72-43b0-9501-a8f223708a9a)
 
 ---
 
