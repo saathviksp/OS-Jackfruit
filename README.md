@@ -1,4 +1,4 @@
-<img width="939" height="132" alt="image" src="https://github.com/user-attachments/assets/0d91b4f2-9ba1-4c88-80fb-199c5fe2cf20" /><img width="949" height="282" alt="image" src="https://github.com/user-attachments/assets/fe8afab3-2d63-4248-9b65-5848b58532e2" /># Supervised Multi-Container Runtime with Kernel Memory Monitor
+
 
 ## Team Members
 
@@ -87,10 +87,10 @@ In our experiment, `fast` (nice 0) and `slow` (nice 15) ran simultaneously with 
 ![](https://github.com/user-attachments/assets/5d8a8d7b-4087-4c15-a6dc-454c490d8f6f)
 ![](https://github.com/user-attachments/assets/e1558384-4f41-44e9-acd4-60608f942e2c)
 
-### 7. 7.	Scheduling experiment comparing CPU-bound (cpu_test) and I/O-bound (io_test) workloads. The CPU-bound process continuously consumes CPU and produces frequent output, while the I/O-bound process performs periodic operations with delays due to sleep, resulting in spaced output. This demonstrates how the Linux scheduler maintains responsiveness for I/O-bound processes.
+### 7.	Scheduling experiment comparing CPU-bound (cpu_test) and I/O-bound (io_test) workloads. The CPU-bound process continuously consumes CPU and produces frequent output, while the I/O-bound process performs periodic operations with delays due to sleep, resulting in spaced output. This demonstrates how the Linux scheduler maintains responsiveness for I/O-bound processes.
 ![ss7](https://github.com/user-attachments/assets/1d55c804-3201-4063-b236-6ee2b2cf4760)
 
-### 8. 8.	Clean teardown demonstrating that all containers are properly terminated, the supervisor exits cleanly, and no zombie or residual processes remain in the system.
+### 8.	Clean teardown demonstrating that all containers are properly terminated, the supervisor exits cleanly, and no zombie or residual processes remain in the system.
 ![soft-hard](https://github.com/user-attachments/assets/6f349f10-e628-4885-b04b-63f188aaf533)
 ![soft-hard](https://github.com/user-attachments/assets/92f8828a-6461-4290-8c35-860087a4e9e9)
 
