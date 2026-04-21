@@ -1,4 +1,4 @@
-# Supervised Multi-Container Runtime with Kernel Memory Monitor
+<img width="939" height="132" alt="image" src="https://github.com/user-attachments/assets/0d91b4f2-9ba1-4c88-80fb-199c5fe2cf20" /><img width="949" height="282" alt="image" src="https://github.com/user-attachments/assets/fe8afab3-2d63-4248-9b65-5848b58532e2" /># Supervised Multi-Container Runtime with Kernel Memory Monitor
 
 ## Team Members
 
@@ -66,43 +66,34 @@ In our experiment, `fast` (nice 0) and `slow` (nice 15) ran simultaneously with 
 
 ### 1. Boilerplate directory — all files present after build
 
-![ss1](https://github.com/user-attachments/assets/a082306f-0fb4-4a79-b00c-8aaf621d9e1a)
+![ss1](https://github.com/user-attachments/assets/a49ca265-e42d-4889-ae37-769d44058e6b)
 
 ### 2. Kernel module loaded — dmesg confirms device created, supervisor starts
 
-![ss3-1](https://github.com/user-attachments/assets/6b4072c3-869f-401b-8395-4f2454685400)
+![ss3-1](https://github.com/user-attachments/assets/536c6890-e176-43a3-9baf-93b8e3e6ce27)
 
 ### 3. Full CLI demo — start, ps, logs (hello), stop
 
-![ss3-2](https://github.com/user-attachments/assets/4c4cda50-5467-4c9d-8de1-5a90b49dd66e)
+![ss3-2](https://github.com/user-attachments/assets/359037e1-9cd7-46f0-afe8-cc2bb74b7f45)
 
 ### 4. Two containers running simultaneously — alpha and beta both show running
 
-![ss4](https://github.com/user-attachments/assets/8b378962-03eb-49ae-b007-804d41a42837)
+![ss4](https://github.com/user-attachments/assets/ff85e168-d956-4f10-9f53-2cba483d650c)
+![ss4](https://github.com/user-attachments/assets/02e71a4d-5683-48fa-a31c-db63303e90bd)
 
-### 5. Supervisor terminal — containers registered and started
+5,6. Soft and hard memory limit enforcement: The kernel module logs a warning when the container exceeds the soft memory limit and terminates the container using SIGKILL when the hard limit is exceeded confirming forced kill in the metadata.
+![](https://github.com/user-attachments/assets/572e2a25-949a-41c6-9842-289d00bafc77 )
+![](https://github.com/user-attachments/assets/f2bab92d-d200-4a5e-adbd-cf8f71a3f7cc)
+![](https://github.com/user-attachments/assets/5d8a8d7b-4087-4c15-a6dc-454c490d8f6f)
+![](https://github.com/user-attachments/assets/e1558384-4f41-44e9-acd4-60608f942e2c)
 
-![s44-2](https://github.com/user-attachments/assets/0a9e0b24-871f-482e-9d3b-30731d836623)
+### 7. 7.	Scheduling experiment comparing CPU-bound (cpu_test) and I/O-bound (io_test) workloads. The CPU-bound process continuously consumes CPU and produces frequent output, while the I/O-bound process performs periodic operations with delays due to sleep, resulting in spaced output. This demonstrates how the Linux scheduler maintains responsiveness for I/O-bound processes.
+![ss7](https://github.com/user-attachments/assets/1d55c804-3201-4063-b236-6ee2b2cf4760)
 
-### 6. Log capture — container log test and line 2 from bounded buffer pipeline
+### 8. 8.	Clean teardown demonstrating that all containers are properly terminated, the supervisor exits cleanly, and no zombie or residual processes remain in the system.
+![soft-hard](https://github.com/user-attachments/assets/6f349f10-e628-4885-b04b-63f188aaf533)
+![soft-hard](https://github.com/user-attachments/assets/92f8828a-6461-4290-8c35-860087a4e9e9)
 
-![ss7-2](https://github.com/user-attachments/assets/ea3bfffa-753e-469e-8f30-47d0c1aa5cec)
-
-### 7. Soft limit warning — dmesg shows SOFT LIMIT for memtest
-
-![ss7](https://github.com/user-attachments/assets/f2ecb526-ee9e-4653-8f27-8b9d173ec96c)
-
-### 8. Hard limit kill — dmesg shows HARD LIMIT for memtest and killme, both terminated
-
-![soft-hard](https://github.com/user-attachments/assets/cc96f2e7-4cbc-4713-bc45-085d048c255f)
-
-### 9. Scheduling experiment — fast (nice 0) and slow (nice 15) running concurrently
-
-![soft-nice](https://github.com/user-attachments/assets/e6215c32-7220-4ff5-a427-0e3f23660188)
-
-### 10. Clean teardown — no zombie processes after supervisor shutdown
-
-![ss8](https://github.com/user-attachments/assets/f087aa1f-3f72-43b0-9501-a8f223708a9a)
 
 ---
 
