@@ -64,19 +64,18 @@ In our experiment, `fast` (nice 0) and `slow` (nice 15) ran simultaneously with 
 
 ## Screenshots
 
-### 1. Boilerplate directory — all files present after build
+### 1.	Two containers (alpha and beta) running concurrently under a single supervisor process.
 
 ![ss1](https://github.com/user-attachments/assets/a49ca265-e42d-4889-ae37-769d44058e6b)
 
-### 2. Kernel module loaded — dmesg confirms device created, supervisor starts
+### 2.Supervisor tracking container metadata including ID, PID, state, and exit status.
 
 ![ss3-1](https://github.com/user-attachments/assets/536c6890-e176-43a3-9baf-93b8e3e6ce27)
 
-### 3. Full CLI demo — start, ps, logs (hello), stop
-
+### 3.	Container output captured through logging pipeline using producer-consumer bounded buffer.
 ![ss3-2](https://github.com/user-attachments/assets/359037e1-9cd7-46f0-afe8-cc2bb74b7f45)
 
-### 4. Two containers running simultaneously — alpha and beta both show running
+### 4.4.	CLI sending command to supervisor via UNIX socket IPC and receiving response.
 
 ![ss4](https://github.com/user-attachments/assets/ff85e168-d956-4f10-9f53-2cba483d650c)
 ![ss4](https://github.com/user-attachments/assets/02e71a4d-5683-48fa-a31c-db63303e90bd)
